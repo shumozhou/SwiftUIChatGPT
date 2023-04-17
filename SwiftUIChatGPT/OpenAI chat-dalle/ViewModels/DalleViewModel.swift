@@ -5,10 +5,9 @@ class DalleViewModel: ObservableObject {
     private let apiKey: String
     private var openAI: OpenAI
     @Published var messages = [Message]()
-//    @AppStorage("storedKey") var storedKey: String = ""
-
     init() {
-        apiKey = "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"
+        
+        apiKey = "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"
         openAI = OpenAI(Configuration(organizationId: "Personal", apiKey: apiKey))
     }
     

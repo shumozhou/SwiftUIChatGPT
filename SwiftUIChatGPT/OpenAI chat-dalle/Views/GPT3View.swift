@@ -4,9 +4,7 @@ struct GPT3View: View {
     @ObservedObject var gpt3ViewModel = GPT3ViewModel()
     @State var typingMessage: String = ""
     @Namespace var bottomID
-    @FocusState private var fieldIsFocused: Bool
-    @AppStorage("storedKey") var storedKey: String = ""
-    
+    @FocusState private var fieldIsFocused: Bool    
     var body: some View {
         NavigationView(){
             VStack(alignment: .leading){

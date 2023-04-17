@@ -3,7 +3,6 @@ import SwiftUI
 struct MineView: View {
     @State private var key = ""
     @State private var showToast: Bool = false
-    @AppStorage("storedKey") var storedKey: String = ""
     @FocusState private var fieldIsFocused: Bool
     @State var typingMessage: String = ""
     var body: some View {
@@ -30,7 +29,7 @@ struct MineView: View {
                 }
                 
                 Spacer()
-
+                
                 Button(action: saveKey) {
                     Text("Save Key")
                         .foregroundColor(.white)
@@ -42,12 +41,12 @@ struct MineView: View {
                         .cornerRadius(5.0)
                 }
                 .alert(isPresented: $showToast) {
-                                Alert(title: Text("APIKEY 为空"), message: Text("请输入APIKEY"), dismissButton: .default(Text("好")))
-                            }
+                    Alert(title: Text("APIKEY 为空"), message: Text("请输入APIKEY"), dismissButton: .default(Text("好")))
+                }
                 .frame(width: 200, height: 40)
             }
             .onAppear {
-//                loadKey()
+                //                loadKey()
             }
             .onDisappear {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
@@ -65,18 +64,13 @@ struct MineView: View {
         print("iiiiiiii" + typingMessage)
         if typingMessage.isEmpty {
             showToast = true
-
-            print("iiiiiiii" + typingMessage)
             return
         }
         
         print("iiiiiiii33333" + typingMessage)
-            hideKeyboard()
-        storedKey = typingMessage
-    }
-    
-    func loadKey() {
-        typingMessage = storedKey
+        hideKeyboard()
+        key = typingMessage
+        UserDefaults.standard.set(key, forKey: "APIKEY")
     }
     
     private func hideKeyboard() {
