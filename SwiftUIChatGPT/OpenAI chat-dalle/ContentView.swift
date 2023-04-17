@@ -14,7 +14,7 @@ struct ContentView: View {
                 }
                 
                 MineView().tabItem{
-                    Label("tadie", systemImage: "paintbrush")
+                    Label("tadie", systemImage: "person.crop.circle")
                 }
             }
         }

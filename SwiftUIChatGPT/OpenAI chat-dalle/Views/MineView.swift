@@ -71,6 +71,10 @@ struct MineView: View {
         hideKeyboard()
         key = typingMessage
         UserDefaults.standard.set(key, forKey: "APIKEY")
+        typingMessage = ""
+        _ = alert(isPresented: $showToast) {
+            Alert(title: Text(""), message: Text("保存成功"), dismissButton: .default(Text("好")))
+        }
     }
     
     private func hideKeyboard() {

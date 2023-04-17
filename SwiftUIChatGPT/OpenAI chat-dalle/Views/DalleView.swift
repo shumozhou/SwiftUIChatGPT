@@ -34,7 +34,7 @@ struct DalleView: View {
                     VStack {
                         Image(systemName: "paintbrush")
                             .font(.largeTitle)
-                        Text("Write your first message!")
+                        Text("Bye The Fucking World!")
                             .font(.subheadline)
                             .padding(10)
                     }
