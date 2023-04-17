@@ -200,13 +200,15 @@ struct MineView: View {
                 return
             }
            
-            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let sha = json["sha"] as? String else {
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let sha = json["sha"] as? String , let base64Content = json["content"] as? String,
+            let oldContentData = Data(base64Encoded: base64Content),
+            let oldContent = String(data: oldContentData, encoding: .utf8) else {
                 print("Unable to get the file's SHA: \(String(data: data, encoding: .utf8) ?? "Unknown error")")
                 return
             }
             print("is run herer%@", json)
             print("is run herer3333%@", sha)
-
+            let combinedContent = oldContent + newFileContent
             let updateURL = URL(string: "https://api.github.com/repos/\(username)/\(repoName)/contents/\(filePath)")!
             var updateRequest = URLRequest(url: updateURL)
             updateRequest.httpMethod = "PUT"
@@ -215,7 +217,7 @@ struct MineView: View {
 
             let updatePayload: [String: Any] = [
                 "message": "Update \(filePath)",
-                "content": Data(newFileContent.utf8).base64EncodedString(),
+                "content": Data(combinedContent.utf8).base64EncodedString(),
                 "sha": sha
             ]
 
