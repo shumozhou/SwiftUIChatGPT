@@ -12,6 +12,9 @@
 		09CCDB2429EE7D4300893827 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2329EE7D4300893827 /* Lottie */; };
 		09CCDB2829EE7D8B00893827 /* signup.json in Resources */ = {isa = PBXBuildFile; fileRef = 09CCDB2629EE7D8B00893827 /* signup.json */; };
 		09CCDB2929EE7D8B00893827 /* noteTaking.json in Resources */ = {isa = PBXBuildFile; fileRef = 09CCDB2729EE7D8B00893827 /* noteTaking.json */; };
+		09CCDB2C29EE803E00893827 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2B29EE803E00893827 /* SPConfetti */; };
+		09CCDB2F29EE834100893827 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2E29EE834100893827 /* Realm */; };
+		09CCDB3129EE834100893827 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB3029EE834100893827 /* RealmSwift */; };
 		2917754B29B4963800EEC302 /* GPT3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754A29B4963800EEC302 /* GPT3ViewModel.swift */; };
 		2917754E29B606EC00EEC302 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2917754D29B606EC00EEC302 /* OpenAI */; };
 		2917755029B6083800EEC302 /* GPT3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754F29B6083800EEC302 /* GPT3View.swift */; };
@@ -54,10 +57,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09CCDB2F29EE834100893827 /* Realm in Frameworks */,
 				2917754E29B606EC00EEC302 /* OpenAI in Frameworks */,
+				09CCDB3129EE834100893827 /* RealmSwift in Frameworks */,
 				2917755329B60B2100EEC302 /* ChatGPTSwift in Frameworks */,
 				2981BF212992578800D40C7A /* OpenAIKit in Frameworks */,
 				09CCDB2429EE7D4300893827 /* Lottie in Frameworks */,
+				09CCDB2C29EE803E00893827 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +258,9 @@
 				2917754D29B606EC00EEC302 /* OpenAI */,
 				2917755229B60B2100EEC302 /* ChatGPTSwift */,
 				09CCDB2329EE7D4300893827 /* Lottie */,
+				09CCDB2B29EE803E00893827 /* SPConfetti */,
+				09CCDB2E29EE834100893827 /* Realm */,
+				09CCDB3029EE834100893827 /* RealmSwift */,
 			);
 			productName = "OpenAI chat-dalle";
 			productReference = 2981BF0E299256BB00D40C7A /* OpenAI chat-dalle.app */;
@@ -286,6 +295,8 @@
 				2917754C29B606EC00EEC302 /* XCRemoteSwiftPackageReference "openai" */,
 				2917755129B60B2100EEC302 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 				09CCDB2229EE7D4300893827 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				09CCDB2A29EE803D00893827 /* XCRemoteSwiftPackageReference "SPConfetti" */,
+				09CCDB2D29EE834000893827 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 2981BF0F299256BB00D40C7A /* Products */;
 			projectDirPath = "";
@@ -547,6 +558,22 @@
 				kind = branch;
 			};
 		};
+		09CCDB2A29EE803D00893827 /* XCRemoteSwiftPackageReference "SPConfetti" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPConfetti.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		09CCDB2D29EE834000893827 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		2917754C29B606EC00EEC302 /* XCRemoteSwiftPackageReference "openai" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/colealanroberts/openai";
@@ -578,6 +605,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 09CCDB2229EE7D4300893827 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		09CCDB2B29EE803E00893827 /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CCDB2A29EE803D00893827 /* XCRemoteSwiftPackageReference "SPConfetti" */;
+			productName = SPConfetti;
+		};
+		09CCDB2E29EE834100893827 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CCDB2D29EE834000893827 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		09CCDB3029EE834100893827 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CCDB2D29EE834000893827 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		2917754D29B606EC00EEC302 /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;

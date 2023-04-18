@@ -55,6 +55,33 @@
       }
     },
     {
+      "identity" : "realm-core",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-core.git",
+      "state" : {
+        "revision" : "e56380f05793998dfea0d87a34b68fdba475961c",
+        "version" : "13.9.0"
+      }
+    },
+    {
+      "identity" : "realm-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/realm-swift.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "c238f838efefed37503c35f49e745c1376bf18d1"
+      }
+    },
+    {
+      "identity" : "spconfetti",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivanvorobei/SPConfetti.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "257a8674c62212a3919abd1f9cb31dc2fc7b0992"
+      }
+    },
+    {
       "identity" : "swift-atomics",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics.git",
