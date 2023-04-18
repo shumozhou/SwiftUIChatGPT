@@ -61,6 +61,8 @@
 		091E072729EE45400032160B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				091E072F29EE64CF0032160B /* Views */,
+				091E072E29EE64C10032160B /* ViewModels */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -68,6 +70,7 @@
 		091E072829EE45550032160B /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				091E073129EE67840032160B /* Models */,
 				091E072D29EE461F0032160B /* Views */,
 				091E072C29EE46100032160B /* ViewModels */,
 			);
@@ -77,6 +80,7 @@
 		091E072929EE45670032160B /* Dalle */ = {
 			isa = PBXGroup;
 			children = (
+				091E073029EE676E0032160B /* Models */,
 				091E072B29EE45CD0032160B /* ViewModels */,
 				091E072A29EE45C10032160B /* Views */,
 			);
@@ -86,6 +90,7 @@
 		091E072A29EE45C10032160B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2981BF2A2992589300D40C7A /* DalleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,8 +114,39 @@
 		091E072D29EE461F0032160B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2917754F29B6083800EEC302 /* GPT3View.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		091E072E29EE64C10032160B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		091E072F29EE64CF0032160B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09AFB13D29E93211001C9A27 /* MineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		091E073029EE676E0032160B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		091E073129EE67840032160B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29646506299F7E12005146FD /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		09AFB13F29E95800001C9A27 /* Utility */ = {
@@ -119,14 +155,6 @@
 				09AFB14029E95922001C9A27 /* ToastView.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		29646505299F7E02005146FD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				29646506299F7E12005146FD /* Message.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		2981BF05299256BB00D40C7A = {
@@ -153,8 +181,6 @@
 				091E072829EE45550032160B /* ChatGPT */,
 				091E072729EE45400032160B /* Mine */,
 				09AFB13F29E95800001C9A27 /* Utility */,
-				29646505299F7E02005146FD /* Models */,
-				2981BF262992583C00D40C7A /* ViewModels */,
 				2981BF252992581600D40C7A /* Views */,
 				2981BF11299256BB00D40C7A /* OpenAI_chat_dalleApp.swift */,
 				2981BF13299256BB00D40C7A /* ContentView.swift */,
@@ -176,18 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				2981BF272992584B00D40C7A /* Messages */,
-				2981BF2A2992589300D40C7A /* DalleView.swift */,
-				2917754F29B6083800EEC302 /* GPT3View.swift */,
-				09AFB13D29E93211001C9A27 /* MineView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2981BF262992583C00D40C7A /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		2981BF272992584B00D40C7A /* Messages */ = {
