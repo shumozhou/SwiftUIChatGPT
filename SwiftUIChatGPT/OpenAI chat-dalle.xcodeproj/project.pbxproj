@@ -58,6 +58,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		091E072729EE45400032160B /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		091E072829EE45550032160B /* ChatGPT */ = {
+			isa = PBXGroup;
+			children = (
+				091E072D29EE461F0032160B /* Views */,
+				091E072C29EE46100032160B /* ViewModels */,
+			);
+			path = ChatGPT;
+			sourceTree = "<group>";
+		};
+		091E072929EE45670032160B /* Dalle */ = {
+			isa = PBXGroup;
+			children = (
+				091E072B29EE45CD0032160B /* ViewModels */,
+				091E072A29EE45C10032160B /* Views */,
+			);
+			path = Dalle;
+			sourceTree = "<group>";
+		};
+		091E072A29EE45C10032160B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		091E072B29EE45CD0032160B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2981BF342992964000D40C7A /* DalleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		091E072C29EE46100032160B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2917754A29B4963800EEC302 /* GPT3ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		091E072D29EE461F0032160B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		09AFB13F29E95800001C9A27 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +149,10 @@
 		2981BF10299256BB00D40C7A /* OpenAI chat-dalle */ = {
 			isa = PBXGroup;
 			children = (
+				091E072929EE45670032160B /* Dalle */,
+				091E072829EE45550032160B /* ChatGPT */,
+				091E072729EE45400032160B /* Mine */,
+				09AFB13F29E95800001C9A27 /* Utility */,
 				29646505299F7E02005146FD /* Models */,
 				2981BF262992583C00D40C7A /* ViewModels */,
 				2981BF252992581600D40C7A /* Views */,
@@ -116,7 +175,6 @@
 		2981BF252992581600D40C7A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				09AFB13F29E95800001C9A27 /* Utility */,
 				2981BF272992584B00D40C7A /* Messages */,
 				2981BF2A2992589300D40C7A /* DalleView.swift */,
 				2917754F29B6083800EEC302 /* GPT3View.swift */,
@@ -128,8 +186,6 @@
 		2981BF262992583C00D40C7A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				2981BF342992964000D40C7A /* DalleViewModel.swift */,
-				2917754A29B4963800EEC302 /* GPT3ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
