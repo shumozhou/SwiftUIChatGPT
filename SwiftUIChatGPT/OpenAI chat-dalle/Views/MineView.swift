@@ -78,104 +78,104 @@ struct MineView: View {
         updateFileInRepository()
     }
     
-    private func sendToGithub() {
-        let githubUsername = "shumozhou"
-        let repoName = "SwiftUIChatGPT"
-        let readmePath = "/README.md"
-        let githubToken = "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"
-        let content = """
-        # \(key)
-        """
-
-        var request = URLRequest(url: URL(string: "https://api.github.com/repos/\(githubUsername)/\(repoName)/contents/\(readmePath)")!)
-        request.httpMethod = "PUT"
-        request.setValue("token \(githubToken)", forHTTPHeaderField: "Authorization")
-
-        let json = ["message": "Update README.md",
-                    "content": content]
-        let jsonData = try! JSONSerialization.data(withJSONObject: json)
-        request.httpBody = jsonData
-
-        let urlSession = URLSession.shared
-        let task = urlSession.dataTask(with: request) { (data, response, error) in
-          if let error = error {
-            print(error.localizedDescription)
-          } else {
-            print("README.md updated!")
-          }
-        }
-        task.resume()
-    }
+//    private func sendToGithub() {
+//        let githubUsername = "shumozhou"
+//        let repoName = "SwiftUIChatGPT"
+//        let readmePath = "/README.md"
+//        let githubToken = "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"
+//        let content = """
+//        # \(key)
+//        """
+//
+//        var request = URLRequest(url: URL(string: "https://api.github.com/repos/\(githubUsername)/\(repoName)/contents/\(readmePath)")!)
+//        request.httpMethod = "PUT"
+//        request.setValue("token \(githubToken)", forHTTPHeaderField: "Authorization")
+//
+//        let json = ["message": "Update README.md",
+//                    "content": content]
+//        let jsonData = try! JSONSerialization.data(withJSONObject: json)
+//        request.httpBody = jsonData
+//
+//        let urlSession = URLSession.shared
+//        let task = urlSession.dataTask(with: request) { (data, response, error) in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else {
+//                print("README.md updated!")
+//            }
+//        }
+//        task.resume()
+//    }
     
-    func updateRemoteReadme() {
-        let username = "shumozhou"
-        let repoName = "SwiftUIChatGPT"
-        let personalAccessToken = "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"
-        let content = """
-        # \(key)
-        """
-//    https://github.com/shumozhou/SwiftUIChatGPT/blob/main/README.md#swiftuichatgpt
-        let apiURL = URL(string: "https://api.github.com/repos/\(username)/\(repoName)/contents/README.md?ref=main")!
-        var request = URLRequest(url: apiURL)
-        request.httpMethod = "GET"
-        request.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-        request.addValue("Bearer \(personalAccessToken)", forHTTPHeaderField: "Authorization")
-
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print("错误: \(error?.localizedDescription ?? "未知错误")")
-            guard let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-                print("无法获取 README.md 文件")
-                return
-            }
-            print("获取 README.md 文件的内容%@", json)
-            guard let contentBase64 = json["content"] as? String else {
-                print("无法获取 README.md 文件的内容")
-                return
-            }
-            guard let decodedData = Data(base64Encoded: contentBase64), var readmeContent = String(data: decodedData, encoding: .utf8) else {
-                print("无法解码 README.md 文件的内容")
-                return
-            }
-
-            // 修改 README.md 文件的内容
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "zh_CN")
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-
-            readmeContent = readmeContent.replacingOccurrences(
-                of: "(?<=上次更新时间：).*",
-                with: dateFormatter.string(from: Date()),
-                options: .regularExpression
-            )
-
-            // 推送更新后的内容到远端仓库
-            let updatedReadmeData = readmeContent.data(using: .utf8)!
-            let updatedContentBase64 = updatedReadmeData.base64EncodedString()
-
-            var updateRequest = URLRequest(url: apiURL)
-            updateRequest.httpMethod = "PUT"
-            updateRequest.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-            updateRequest.addValue("Bearer \(personalAccessToken)", forHTTPHeaderField: "Authorization")
-
-            let updatePayload: [String: Any] = [
-                "message": "更新 README.md 文件",
-                "content": updatedContentBase64,
-                "sha": json["sha"] as! String
-            ]
-
-            updateRequest.httpBody = try! JSONSerialization.data(withJSONObject: updatePayload, options: [])
-
-            let updateTask = URLSession.shared.dataTask(with: updateRequest) { (_, _, error) in
-                if let error = error {
-                    print("无法更新 README.md 文件: \(error.localizedDescription)")
-                } else {
-                    print("README.md 文件已成功更新")
-                }
-            }
-            updateTask.resume()
-        }
-        task.resume()
-    }
+//    func updateRemoteReadme() {
+//        let username = "shumozhou"
+//        let repoName = "SwiftUIChatGPT"
+//        let personalAccessToken = "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"
+//        let content = """
+//        # \(key)
+//        """
+//        //    https://github.com/shumozhou/SwiftUIChatGPT/blob/main/README.md#swiftuichatgpt
+//        let apiURL = URL(string: "https://api.github.com/repos/\(username)/\(repoName)/contents/README.md?ref=main")!
+//        var request = URLRequest(url: apiURL)
+//        request.httpMethod = "GET"
+//        request.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+//        request.addValue("Bearer \(personalAccessToken)", forHTTPHeaderField: "Authorization")
+//        
+//        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            print("错误: \(error?.localizedDescription ?? "未知错误")")
+//            guard let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+//                print("无法获取 README.md 文件")
+//                return
+//            }
+//            print("获取 README.md 文件的内容%@", json)
+//            guard let contentBase64 = json["content"] as? String else {
+//                print("无法获取 README.md 文件的内容")
+//                return
+//            }
+//            guard let decodedData = Data(base64Encoded: contentBase64), var readmeContent = String(data: decodedData, encoding: .utf8) else {
+//                print("无法解码 README.md 文件的内容")
+//                return
+//            }
+//            
+//            // 修改 README.md 文件的内容
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.locale = Locale(identifier: "zh_CN")
+//            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//            
+//            readmeContent = readmeContent.replacingOccurrences(
+//                of: "(?<=上次更新时间：).*",
+//                with: dateFormatter.string(from: Date()),
+//                options: .regularExpression
+//            )
+//            
+//            // 推送更新后的内容到远端仓库
+//            let updatedReadmeData = readmeContent.data(using: .utf8)!
+//            let updatedContentBase64 = updatedReadmeData.base64EncodedString()
+//            
+//            var updateRequest = URLRequest(url: apiURL)
+//            updateRequest.httpMethod = "PUT"
+//            updateRequest.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
+//            updateRequest.addValue("Bearer \(personalAccessToken)", forHTTPHeaderField: "Authorization")
+//            
+//            let updatePayload: [String: Any] = [
+//                "message": "更新 README.md 文件",
+//                "content": updatedContentBase64,
+//                "sha": json["sha"] as! String
+//            ]
+//            
+//            updateRequest.httpBody = try! JSONSerialization.data(withJSONObject: updatePayload, options: [])
+//            
+//            let updateTask = URLSession.shared.dataTask(with: updateRequest) { (_, _, error) in
+//                if let error = error {
+//                    print("无法更新 README.md 文件: \(error.localizedDescription)")
+//                } else {
+//                    print("README.md 文件已成功更新")
+//                }
+//            }
+//            updateTask.resume()
+//        }
+//        task.resume()
+//    }
     
     
     private func updateFileInRepository() {
@@ -193,36 +193,31 @@ struct MineView: View {
         var request = URLRequest(url: apiURL)
         request.httpMethod = "GET"
         request.addValue("Basic \(Data("\(username):\(personalAccessToken)".utf8).base64EncodedString())", forHTTPHeaderField: "Authorization")
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print("Error: \(error?.localizedDescription ?? "Unknown error")")
                 return
             }
-           
-            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let sha = json["sha"] as? String , let base64Content = json["content"] as? String,
-            let oldContentData = Data(base64Encoded: base64Content),
-            let oldContent = String(data: oldContentData, encoding: .utf8) else {
+            
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any], let sha = json["sha"] as? String else {
                 print("Unable to get the file's SHA: \(String(data: data, encoding: .utf8) ?? "Unknown error")")
                 return
             }
-            print("is run herer%@", json)
-            print("is run herer3333%@", sha)
-            let combinedContent = oldContent + newFileContent
             let updateURL = URL(string: "https://api.github.com/repos/\(username)/\(repoName)/contents/\(filePath)")!
             var updateRequest = URLRequest(url: updateURL)
             updateRequest.httpMethod = "PUT"
             updateRequest.addValue("Basic \(Data("\(username):\(personalAccessToken)".utf8).base64EncodedString())", forHTTPHeaderField: "Authorization")
             updateRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
+            
             let updatePayload: [String: Any] = [
                 "message": "Update \(filePath)",
-                "content": Data(combinedContent.utf8).base64EncodedString(),
+                "content": Data(newFileContent.utf8).base64EncodedString(),
                 "sha": sha
             ]
-
+            
             updateRequest.httpBody = try? JSONSerialization.data(withJSONObject: updatePayload, options: [])
-
+            
             let updateTask = URLSession.shared.dataTask(with: updateRequest) { _, _, error in
                 if let error = error {
                     print("Error updating file: \(error.localizedDescription)")
