@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "43a8c7ff7109fcc0bde6366e2778d880d8bc3a06"
+      }
+    },
+    {
       "identity" : "openai",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/colealanroberts/openai",

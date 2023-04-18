@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		09AFB13E29E93211001C9A27 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AFB13D29E93211001C9A27 /* MineView.swift */; };
 		09AFB14129E95922001C9A27 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AFB14029E95922001C9A27 /* ToastView.swift */; };
+		09CCDB2429EE7D4300893827 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2329EE7D4300893827 /* Lottie */; };
+		09CCDB2829EE7D8B00893827 /* signup.json in Resources */ = {isa = PBXBuildFile; fileRef = 09CCDB2629EE7D8B00893827 /* signup.json */; };
+		09CCDB2929EE7D8B00893827 /* noteTaking.json in Resources */ = {isa = PBXBuildFile; fileRef = 09CCDB2729EE7D8B00893827 /* noteTaking.json */; };
 		2917754B29B4963800EEC302 /* GPT3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754A29B4963800EEC302 /* GPT3ViewModel.swift */; };
 		2917754E29B606EC00EEC302 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2917754D29B606EC00EEC302 /* OpenAI */; };
 		2917755029B6083800EEC302 /* GPT3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754F29B6083800EEC302 /* GPT3View.swift */; };
@@ -29,6 +32,8 @@
 /* Begin PBXFileReference section */
 		09AFB13D29E93211001C9A27 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		09AFB14029E95922001C9A27 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		09CCDB2629EE7D8B00893827 /* signup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signup.json; sourceTree = "<group>"; };
+		09CCDB2729EE7D8B00893827 /* noteTaking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noteTaking.json; sourceTree = "<group>"; };
 		2917754A29B4963800EEC302 /* GPT3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT3ViewModel.swift; sourceTree = "<group>"; };
 		2917754F29B6083800EEC302 /* GPT3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT3View.swift; sourceTree = "<group>"; };
 		29646506299F7E12005146FD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 				2917754E29B606EC00EEC302 /* OpenAI in Frameworks */,
 				2917755329B60B2100EEC302 /* ChatGPTSwift in Frameworks */,
 				2981BF212992578800D40C7A /* OpenAIKit in Frameworks */,
+				09CCDB2429EE7D4300893827 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +163,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		09CCDB2529EE7D6000893827 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				09CCDB2729EE7D8B00893827 /* noteTaking.json */,
+				09CCDB2629EE7D8B00893827 /* signup.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		2981BF05299256BB00D40C7A = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +192,7 @@
 		2981BF10299256BB00D40C7A /* OpenAI chat-dalle */ = {
 			isa = PBXGroup;
 			children = (
+				09CCDB2529EE7D6000893827 /* Lottie */,
 				091E072929EE45670032160B /* Dalle */,
 				091E072829EE45550032160B /* ChatGPT */,
 				091E072729EE45400032160B /* Mine */,
@@ -235,6 +251,7 @@
 				2981BF202992578800D40C7A /* OpenAIKit */,
 				2917754D29B606EC00EEC302 /* OpenAI */,
 				2917755229B60B2100EEC302 /* ChatGPTSwift */,
+				09CCDB2329EE7D4300893827 /* Lottie */,
 			);
 			productName = "OpenAI chat-dalle";
 			productReference = 2981BF0E299256BB00D40C7A /* OpenAI chat-dalle.app */;
@@ -268,6 +285,7 @@
 				2981BF1F2992578800D40C7A /* XCRemoteSwiftPackageReference "OpenAIKit" */,
 				2917754C29B606EC00EEC302 /* XCRemoteSwiftPackageReference "openai" */,
 				2917755129B60B2100EEC302 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+				09CCDB2229EE7D4300893827 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 2981BF0F299256BB00D40C7A /* Products */;
 			projectDirPath = "";
@@ -284,8 +302,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				29CCEE1C29C4A16500452C0D /* OpenAI-chat-dalle-Info.plist in Resources */,
+				09CCDB2829EE7D8B00893827 /* signup.json in Resources */,
 				2981BF19299256BE00D40C7A /* Preview Assets.xcassets in Resources */,
 				2981BF16299256BE00D40C7A /* Assets.xcassets in Resources */,
+				09CCDB2929EE7D8B00893827 /* noteTaking.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +539,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		09CCDB2229EE7D4300893827 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		2917754C29B606EC00EEC302 /* XCRemoteSwiftPackageReference "openai" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/colealanroberts/openai";
@@ -546,6 +574,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		09CCDB2329EE7D4300893827 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CCDB2229EE7D4300893827 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		2917754D29B606EC00EEC302 /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2917754C29B606EC00EEC302 /* XCRemoteSwiftPackageReference "openai" */;
