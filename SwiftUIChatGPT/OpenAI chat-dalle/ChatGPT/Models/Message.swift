@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-enum MessageType {
+enum MessageType:Int {
     case text
     case image
     case indicator
@@ -12,7 +12,7 @@ enum MessageType {
 struct Message: Identifiable, Equatable {
     var id = UUID()
     var content: Any
-    let type: MessageType
+    var type: MessageType
     let isUserMessage: Bool
 
     static func ==(lhs: Message, rhs: Message) -> Bool {

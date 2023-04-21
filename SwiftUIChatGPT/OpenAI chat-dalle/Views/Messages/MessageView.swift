@@ -15,9 +15,13 @@ struct MessageView: View {
                     switch message.type {
                     case .text:
                         let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
+//                        print("uuuuu" + output)
                         Text(output)
                             .foregroundColor(.white)
                             .textSelection(.enabled)
+                            .onAppear {
+                                print(String(describing: "Hello, World!" + output))
+                            }
                     case .error:
                         let output = (message.content as! String).trimmingCharacters(in: .whitespacesAndNewlines)
                         Text(output)

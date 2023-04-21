@@ -20,18 +20,22 @@ struct GPT3View: View {
                         .onChange(of: gpt3ViewModel.messages.last?.content as? String) { _ in
                             DispatchQueue.main.async {
                                 withAnimation {
+                                    print("iiiiii")
                                     reader.scrollTo(bottomID)
                                 }
                             }
                         }
                         .onChange(of: gpt3ViewModel.messages.count) { _ in
                             withAnimation {
+                                print("iiiiii99999")
                                 reader.scrollTo(bottomID)
                             }
                         }
-                        
                         .onAppear {
+                            gpt3ViewModel.loadMessages()
                             withAnimation {
+                                print("iiiiii88888")
+                               
                                 reader.scrollTo(bottomID)
                             }
                         }
@@ -40,9 +44,6 @@ struct GPT3View: View {
                     VStack{
                         Image(systemName: "ellipses.bubble")
                             .font(.largeTitle)
-                        //                        Text("Write your first message!")
-                        //                            .font(.subheadline)
-                        //                            .padding(10)
                         Text("Bye The Fucking World!")
                             .font(.subheadline)
                             .padding(10)

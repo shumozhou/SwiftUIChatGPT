@@ -1,7 +1,13 @@
+//
+//  HomeView.swift
+//  OpenAI chat-dalle
+//
+//  Created by 123 周 on 2023/4/18.
+//
+
 import SwiftUI
 
-struct ContentView: View {
-    
+struct HomeView: View {
     var body: some View {
         NavigationView {
             TabView {
@@ -13,7 +19,7 @@ struct ContentView: View {
                     Label("tadie's DALL", systemImage: "paintbrush")
                 }
                 
-                MineView().tabItem{
+                UserPage().tabItem{
                     Label("tadie", systemImage: "person.crop.circle")
                 }
             }
@@ -21,9 +27,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
-

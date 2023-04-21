@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		098EAD4E29F1388B009E3DFA /* RealmMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098EAD4D29F1388B009E3DFA /* RealmMessage.swift */; };
 		09AFB13E29E93211001C9A27 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AFB13D29E93211001C9A27 /* MineView.swift */; };
 		09AFB14129E95922001C9A27 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AFB14029E95922001C9A27 /* ToastView.swift */; };
 		09CCDB2429EE7D4300893827 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2329EE7D4300893827 /* Lottie */; };
@@ -15,6 +16,17 @@
 		09CCDB2C29EE803E00893827 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2B29EE803E00893827 /* SPConfetti */; };
 		09CCDB2F29EE834100893827 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB2E29EE834100893827 /* Realm */; };
 		09CCDB3129EE834100893827 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09CCDB3029EE834100893827 /* RealmSwift */; };
+		09CCDB3629EE9AB500893827 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB3529EE9AB500893827 /* RealmUser.swift */; };
+		09CCDB3829EE9B6B00893827 /* RealmDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB3729EE9B6B00893827 /* RealmDiary.swift */; };
+		09CCDB3A29EE9BDF00893827 /* RealmAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB3929EE9BDF00893827 /* RealmAuth.swift */; };
+		09CCDB3E29EE9C8300893827 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB3D29EE9C8300893827 /* LoginView.swift */; };
+		09CCDB4029EE9C8C00893827 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB3F29EE9C8C00893827 /* RegisterView.swift */; };
+		09CCDB4229EE9CC200893827 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4129EE9CC200893827 /* LottieView.swift */; };
+		09CCDB4429EE9DA400893827 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4329EE9DA400893827 /* WelcomeView.swift */; };
+		09CCDB4729EEDE7700893827 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4629EEDE7700893827 /* HomeView.swift */; };
+		09CCDB4929EFB9C500893827 /* UserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4829EFB9C500893827 /* UserPage.swift */; };
+		09CCDB4B29EFBA1B00893827 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4A29EFBA1B00893827 /* DataStore.swift */; };
+		09CCDB4D29EFC40F00893827 /* APIKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCDB4C29EFC40F00893827 /* APIKeyView.swift */; };
 		2917754B29B4963800EEC302 /* GPT3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754A29B4963800EEC302 /* GPT3ViewModel.swift */; };
 		2917754E29B606EC00EEC302 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 2917754D29B606EC00EEC302 /* OpenAI */; };
 		2917755029B6083800EEC302 /* GPT3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917754F29B6083800EEC302 /* GPT3View.swift */; };
@@ -33,10 +45,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		098EAD4D29F1388B009E3DFA /* RealmMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMessage.swift; sourceTree = "<group>"; };
 		09AFB13D29E93211001C9A27 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		09AFB14029E95922001C9A27 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		09CCDB2629EE7D8B00893827 /* signup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signup.json; sourceTree = "<group>"; };
 		09CCDB2729EE7D8B00893827 /* noteTaking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noteTaking.json; sourceTree = "<group>"; };
+		09CCDB3529EE9AB500893827 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
+		09CCDB3729EE9B6B00893827 /* RealmDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDiary.swift; sourceTree = "<group>"; };
+		09CCDB3929EE9BDF00893827 /* RealmAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAuth.swift; sourceTree = "<group>"; };
+		09CCDB3D29EE9C8300893827 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		09CCDB3F29EE9C8C00893827 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		09CCDB4129EE9CC200893827 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		09CCDB4329EE9DA400893827 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		09CCDB4629EEDE7700893827 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		09CCDB4829EFB9C500893827 /* UserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPage.swift; sourceTree = "<group>"; };
+		09CCDB4A29EFBA1B00893827 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		09CCDB4C29EFC40F00893827 /* APIKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyView.swift; sourceTree = "<group>"; };
 		2917754A29B4963800EEC302 /* GPT3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT3ViewModel.swift; sourceTree = "<group>"; };
 		2917754F29B6083800EEC302 /* GPT3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPT3View.swift; sourceTree = "<group>"; };
 		29646506299F7E12005146FD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -142,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				09AFB13D29E93211001C9A27 /* MineView.swift */,
+				09CCDB4829EFB9C500893827 /* UserPage.swift */,
+				09CCDB4C29EFC40F00893827 /* APIKeyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +190,7 @@
 		09AFB13F29E95800001C9A27 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				09CCDB4129EE9CC200893827 /* LottieView.swift */,
 				09AFB14029E95922001C9A27 /* ToastView.swift */,
 			);
 			path = Utility;
@@ -176,6 +203,62 @@
 				09CCDB2629EE7D8B00893827 /* signup.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		09CCDB3229EE94E500893827 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				09CCDB3429EE951600893827 /* Table */,
+				09CCDB3329EE950900893827 /* Model */,
+				09CCDB4A29EFBA1B00893827 /* DataStore.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		09CCDB3329EE950900893827 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09CCDB3529EE9AB500893827 /* RealmUser.swift */,
+				09CCDB3729EE9B6B00893827 /* RealmDiary.swift */,
+				098EAD4D29F1388B009E3DFA /* RealmMessage.swift */,
+				09CCDB3929EE9BDF00893827 /* RealmAuth.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09CCDB3429EE951600893827 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		09CCDB3B29EE9C3E00893827 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				09CCDB3C29EE9C7100893827 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		09CCDB3C29EE9C7100893827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09CCDB4329EE9DA400893827 /* WelcomeView.swift */,
+				09CCDB3D29EE9C8300893827 /* LoginView.swift */,
+				09CCDB3F29EE9C8C00893827 /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09CCDB4529EEDE4400893827 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2981BF13299256BB00D40C7A /* ContentView.swift */,
+				2981BF11299256BB00D40C7A /* OpenAI_chat_dalleApp.swift */,
+				09CCDB4629EEDE7700893827 /* HomeView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		2981BF05299256BB00D40C7A = {
@@ -198,14 +281,15 @@
 		2981BF10299256BB00D40C7A /* OpenAI chat-dalle */ = {
 			isa = PBXGroup;
 			children = (
+				09CCDB4529EEDE4400893827 /* App */,
+				09CCDB3B29EE9C3E00893827 /* Login */,
+				09CCDB3229EE94E500893827 /* Realm */,
 				09CCDB2529EE7D6000893827 /* Lottie */,
 				091E072929EE45670032160B /* Dalle */,
 				091E072829EE45550032160B /* ChatGPT */,
 				091E072729EE45400032160B /* Mine */,
 				09AFB13F29E95800001C9A27 /* Utility */,
 				2981BF252992581600D40C7A /* Views */,
-				2981BF11299256BB00D40C7A /* OpenAI_chat_dalleApp.swift */,
-				2981BF13299256BB00D40C7A /* ContentView.swift */,
 				2981BF15299256BE00D40C7A /* Assets.xcassets */,
 				2981BF17299256BE00D40C7A /* Preview Content */,
 			);
@@ -328,16 +412,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				2981BF2F299258F800D40C7A /* MessageIndicatorView.swift in Sources */,
+				09CCDB4229EE9CC200893827 /* LottieView.swift in Sources */,
 				2917754B29B4963800EEC302 /* GPT3ViewModel.swift in Sources */,
+				09CCDB3629EE9AB500893827 /* RealmUser.swift in Sources */,
+				098EAD4E29F1388B009E3DFA /* RealmMessage.swift in Sources */,
+				09CCDB3E29EE9C8300893827 /* LoginView.swift in Sources */,
+				09CCDB4D29EFC40F00893827 /* APIKeyView.swift in Sources */,
+				09CCDB3829EE9B6B00893827 /* RealmDiary.swift in Sources */,
 				29646507299F7E12005146FD /* Message.swift in Sources */,
+				09CCDB4B29EFBA1B00893827 /* DataStore.swift in Sources */,
 				2981BF14299256BB00D40C7A /* ContentView.swift in Sources */,
 				2981BF12299256BB00D40C7A /* OpenAI_chat_dalleApp.swift in Sources */,
+				09CCDB4929EFB9C500893827 /* UserPage.swift in Sources */,
+				09CCDB3A29EE9BDF00893827 /* RealmAuth.swift in Sources */,
 				2917755029B6083800EEC302 /* GPT3View.swift in Sources */,
 				09AFB14129E95922001C9A27 /* ToastView.swift in Sources */,
 				2981BF352992964000D40C7A /* DalleViewModel.swift in Sources */,
+				09CCDB4429EE9DA400893827 /* WelcomeView.swift in Sources */,
 				09AFB13E29E93211001C9A27 /* MineView.swift in Sources */,
+				09CCDB4029EE9C8C00893827 /* RegisterView.swift in Sources */,
 				2981BF2B2992589300D40C7A /* DalleView.swift in Sources */,
 				2981BF2D299258D200D40C7A /* MessageView.swift in Sources */,
+				09CCDB4729EEDE7700893827 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +580,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mbabicz.OpenAI-chat-dalle2222222";
+				PRODUCT_BUNDLE_IDENTIFIER = "zcm.OpenAI-chat-dalle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -518,7 +614,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mbabicz.OpenAI-chat-dalle2222222";
+				PRODUCT_BUNDLE_IDENTIFIER = "zcm.OpenAI-chat-dalle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
