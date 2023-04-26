@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject private var dataStore = DataStore.shared
     var body: some View {
         NavigationView {
             TabView {
                 GPT3View()
                 .tabItem{
-                    Label("tadie's BOT", systemImage: "ellipses.bubble")
+                    Label("\(dataStore.user?.name ?? "")'s BOT", systemImage: "ellipses.bubble")
                 }
                 DalleView().tabItem{
-                    Label("tadie's DALL", systemImage: "paintbrush")
+                    Label("\(dataStore.user?.name ?? "")'s DALL", systemImage: "paintbrush")
                 }
                 
                 UserPage().tabItem{
-                    Label("tadie", systemImage: "person.crop.circle")
+                    Label("\(dataStore.user?.name ?? "")", systemImage: "person.crop.circle")
                 }
             }
         }

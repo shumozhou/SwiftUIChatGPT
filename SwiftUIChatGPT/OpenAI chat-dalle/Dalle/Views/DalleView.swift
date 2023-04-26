@@ -6,7 +6,7 @@ struct DalleView: View {
     @ObservedObject var dalleViewModel = DalleViewModel()
     @Namespace var bottomID
     @FocusState private var fieldIsFocused: Bool
-
+    @ObservedObject private var dataStore = DataStore.shared
     var body: some View {
         NavigationView(){
             VStack(alignment: .leading){
@@ -73,7 +73,7 @@ struct DalleView: View {
             .gesture(TapGesture().onEnded {
                 hideKeyboard()
             })
-            .navigationTitle("tadie's DALL")
+            .navigationTitle("\(dataStore.user?.name ?? "")'s DALL")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

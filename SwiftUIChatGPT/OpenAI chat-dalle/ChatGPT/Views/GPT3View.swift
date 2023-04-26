@@ -4,7 +4,8 @@ struct GPT3View: View {
     @ObservedObject var gpt3ViewModel = GPT3ViewModel()
     @State var typingMessage: String = ""
     @Namespace var bottomID
-    @FocusState private var fieldIsFocused: Bool    
+    @FocusState private var fieldIsFocused: Bool
+    @ObservedObject private var dataStore = DataStore.shared
     var body: some View {
         NavigationView(){
             VStack(alignment: .leading){
@@ -20,22 +21,18 @@ struct GPT3View: View {
                         .onChange(of: gpt3ViewModel.messages.last?.content as? String) { _ in
                             DispatchQueue.main.async {
                                 withAnimation {
-                                    print("iiiiii")
                                     reader.scrollTo(bottomID)
                                 }
                             }
                         }
                         .onChange(of: gpt3ViewModel.messages.count) { _ in
                             withAnimation {
-                                print("iiiiii99999")
                                 reader.scrollTo(bottomID)
                             }
                         }
                         .onAppear {
                             gpt3ViewModel.loadMessages()
                             withAnimation {
-                                print("iiiiii88888")
-                               
                                 reader.scrollTo(bottomID)
                             }
                         }
@@ -83,7 +80,7 @@ struct GPT3View: View {
             .gesture(TapGesture().onEnded {
                 hideKeyboard()
             })
-            .navigationTitle("tadie's GPT-4")
+            .navigationTitle("\(dataStore.user?.name ?? "")'s GPT-4")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

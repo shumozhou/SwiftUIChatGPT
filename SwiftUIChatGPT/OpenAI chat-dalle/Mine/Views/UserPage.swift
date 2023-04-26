@@ -40,6 +40,7 @@ struct UserPage: View {
                     Text("Key: " + apiKey)
                         .font(.title)
                         .padding([.top], 10)
+                        .textSelection(.enabled)
                     Spacer()
                     Button(action: {
                         self.presented.toggle()
@@ -55,16 +56,16 @@ struct UserPage: View {
 //                    .padding(.top, 10)
                 
                 HStack {
-                    Text("Your Public Diaries")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                    Spacer()
-                    Button(action: {
-                        self.isOpen.toggle()
-                    }) {
-                        Image(systemName: buttonValue)
-                            .foregroundColor(.gray)
-                    }
+//                    Text("Your Public Diaries")
+//                        .font(.title2)
+//                        .foregroundColor(.gray)
+//                    Spacer()
+//                    Button(action: {
+//                        self.isOpen.toggle()
+//                    }) {
+//                        Image(systemName: buttonValue)
+//                            .foregroundColor(.gray)
+//                    }
                 }
                 .padding(.top, 20)
                 if(isOpen == true) {
@@ -111,7 +112,8 @@ struct UserPage: View {
             }
             .padding()
             .background(Color(red: 63/255, green: 66/255, blue: 78/255, opacity: 1))
-            .navigationTitle("Hello \(dataStore.user?.name ?? "")")
+            .navigationTitle("\(dataStore.user?.name ?? "")")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear{
             apiKey = UserDefaults.standard.string(forKey: "APIKEY") ?? ""

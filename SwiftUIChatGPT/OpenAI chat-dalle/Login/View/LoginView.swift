@@ -1,10 +1,3 @@
-//
-//  LoginView.swift
-//  mongodb-swiftui
-//
-//  Created by Amey Sunu on 14/07/21.
-//
-
 import SwiftUI
 import RealmSwift
 
@@ -98,18 +91,17 @@ struct LoginView: View {
                     Spacer()
                     NavigationLink(destination: RegisterView()) {
                         Text("Don't have an account ? Signup.")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                     }
                     Spacer()
                 }
-                
             }
             .alert(item: $alertItem){ item in
                 Alert(title: item.title, message: item.message, dismissButton: item.dismissButton)
             }
             .navigationTitle("Login")
-            .padding()
-        }.accentColor(Color.white)
+            .background(Color(red: 63/255, green: 66/255, blue: 78/255, opacity: 1))
+        }
     }
 }
 
